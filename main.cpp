@@ -32,7 +32,7 @@ int main() {
         << "====================================================================================" << endl
         << " - prise en charge : " << PRISE_EN_CHARGE                                             << endl
         << " - supp par bagage : " << SUPPLEMENT_PAR_BAGAGE                                       << endl
-        << " - tarif/minute : "    << TARIF_PAR_MINUTE                                            << endl
+        << " - tarif/minute    : " << TARIF_PAR_MINUTE                                            << endl
         << endl;
 
    cout << "votre commande" << endl
@@ -42,7 +42,7 @@ int main() {
    cin >> nombreBagages;
    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-   cout << " - distance [km] : ";
+   cout << " - distance [km]  : ";
    cin >> distanceKm;
    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -56,11 +56,16 @@ int main() {
    cout << endl
         << "votre ticket"                                 << endl
         << "============"                                 << endl
-        << " - prise en charge : "   << PRISE_EN_CHARGE   << endl
-        << " - supp bagages : "      << supplementBagages << endl
+        << " - prise en charge   : " << PRISE_EN_CHARGE   << endl
+        << " - supp bagages      : " << supplementBagages << endl
         << " - prix de la course : " << prixCourse        << endl
         << endl
-        << "TOTAL : " << PRISE_EN_CHARGE + supplementBagages + prixCourse;
+        << "TOTAL : " << PRISE_EN_CHARGE + supplementBagages + prixCourse
+        << endl
+        << endl;
+
+   cout << "presser ENTER pour quitter";
+   cin.ignore(std::numeric_limits<streamsize>::max(),'\n');
 
    return EXIT_SUCCESS;
 }

@@ -1,3 +1,12 @@
+//---------------------------------------------------------
+// Fichier        : LaboTaxi.cpp
+// Auteur(s)      : Philibert Alexandre, Villegas Castrillon Adrian
+// Date           : 2021-10-02
+// But            : Un programme qui calcule le prix d'une course en € en taxi
+// Modifications  :
+// Remarque(s)    : Le programme ne gère pas les saisies
+//---------------------------------------------------------
+
 #include <cstdlib>   // EXIT_SUCCESS
 #include <iostream>  // cin et cout
 #include <iomanip>   // setprecision
@@ -10,13 +19,13 @@ int main() {
    const float SUPPLEMENT_PAR_BAGAGE = 2.50;
    const float TARIF_PAR_MINUTE = 1.20;
 
-   int   nombreBagages;
+   int   nombreBagages; // Il n'est pas possible d'avoir 1/2 bagage, ils sont représentés par un entier
    float distanceKm;
    float vitesseKmH;
    float prixCourse;
    float supplementBagages;
 
-   // définit la précision d'affichage des nombres à virgules (exemple 2.50)
+   // définit la précision d'affichage des nombres à virgules (exemple: 2.50)
    cout << fixed << setprecision(2);
 
    cout << "bonjour, ce programme calcule le prix d'une course en € en taxi voici les conditions" << endl
@@ -52,7 +61,6 @@ int main() {
         << " - prix de la course : " << prixCourse        << endl
         << endl
         << "TOTAL : " << PRISE_EN_CHARGE + supplementBagages + prixCourse;
-
 
    return EXIT_SUCCESS;
 }
